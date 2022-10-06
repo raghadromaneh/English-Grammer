@@ -11,7 +11,7 @@ class ButtonMain extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
       ),
-      color: Color.fromARGB(255, 2, 69, 70),
+      color: const Color.fromARGB(255, 2, 69, 70),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 10,
@@ -19,7 +19,7 @@ class ButtonMain extends StatelessWidget {
         ),
         child: Text(
           "$Title",
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),

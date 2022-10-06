@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ContainerLeft extends StatelessWidget {
-  ContainerLeft(
-      {this.tilte,
-      this.imagepath,
-      this.ContainerColor,
-      required this.OnTapping});
-  Color? ContainerColor;
+  ContainerLeft({this.tilte, this.imagepath, required this.OnTapping});
+
   String? imagepath;
   String? tilte;
   Function() OnTapping;
@@ -17,27 +13,28 @@ class ContainerLeft extends StatelessWidget {
       child: Container(
         width: 170,
         height: 220,
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
-            color: ContainerColor,
+        padding: const EdgeInsets.all(20),
+        decoration: const BoxDecoration(
+            color: Colors.white,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(50),
                 bottomRight: Radius.circular(50))),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               "$imagepath",
-              width: 120,
+              scale: 2,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               "$tilte",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
             )
           ],
         ),

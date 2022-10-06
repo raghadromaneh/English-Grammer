@@ -1,5 +1,6 @@
 import 'package:englishapp/components/TextField.dart';
 import 'package:englishapp/components/buttonMain.dart';
+import 'package:englishapp/components/Dialog.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -20,7 +21,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 22, 147, 141),
+        backgroundColor: const Color.fromARGB(255, 15, 136, 145),
         body: SingleChildScrollView(
           child: Center(
             child: Padding(
@@ -28,7 +29,7 @@ class _LoginState extends State<Login> {
               child: Column(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
@@ -48,10 +49,10 @@ class _LoginState extends State<Login> {
                       width: 250,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   ),
-                  Text(
+                  const Text(
                     "Learn english,",
                     style: TextStyle(
                       fontSize: 27,
@@ -59,7 +60,7 @@ class _LoginState extends State<Login> {
                       color: Colors.white,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Anytime anywhere",
                     style: TextStyle(
                       fontSize: 23,
@@ -67,7 +68,7 @@ class _LoginState extends State<Login> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   InputField(
@@ -75,7 +76,7 @@ class _LoginState extends State<Login> {
                     Security: false,
                     myController: usernameController,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   InputField(
@@ -83,7 +84,7 @@ class _LoginState extends State<Login> {
                     Security: true,
                     myController: passwordController,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   ButtonMain(
@@ -101,9 +102,9 @@ class _LoginState extends State<Login> {
                               showDialog(
                                 context: context,
                                 builder: (context) {
-                                  return AlertDialog(
-                                    actions: [Text("incorrect ")],
-                                  );
+                                  return DialogMain(
+                                      message:
+                                          "Incorrect Username or Password");
                                 },
                               );
                             }
@@ -112,8 +113,8 @@ class _LoginState extends State<Login> {
                           showDialog(
                             context: context,
                             builder: (context) {
-                              return AlertDialog(
-                                actions: [Text("null")],
+                              return DialogMain(
+                                message: "Please enter your Information",
                               );
                             },
                           );

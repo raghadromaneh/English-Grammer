@@ -14,25 +14,25 @@ class InputField extends StatelessWidget {
       child: TextField(
         controller: myController,
         obscureText: Security!,
-        style: TextStyle(color: Colors.black, fontSize: 18),
+        style: const TextStyle(color: Colors.black, fontSize: 18),
         decoration: InputDecoration(
             hintText: "$HintText",
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
               borderRadius: BorderRadius.circular(25),
             ),
-            border: OutlineInputBorder(
+            border: const OutlineInputBorder(
               borderSide: BorderSide(
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
               borderRadius: BorderRadius.circular(25),
