@@ -40,113 +40,120 @@ class _HomeState extends State<Home> {
           ],
         ),
         drawer: Drawer(),
-        body: Padding(
-          padding: const EdgeInsets.all(15),
-          child: ListView(
-            children: [
-              Row(
-                children: [
-                  Text(
+        body: Column(
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text(
                     "Hello , ${CurrentUser!.toUpperCase()} ",
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Image.asset(
-                    "images/hello.png",
-                    scale: 20,
-                  )
+                ),
+                Image.asset(
+                  "images/hello.png",
+                  scale: 20,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "Welcome back",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(
-                height: 10,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(
+                vertical: 20,
+                horizontal: 15,
               ),
-              Text(
-                "Welcome back",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 22, 147, 141),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(110),
+                  topLeft: Radius.circular(20),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 225, 222, 222),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(100),
-                    topLeft: Radius.circular(20),
-                  ),
-                ),
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "Choose Topic",
-                          style: TextStyle(
+              width: double.infinity,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        "Choose Topic",
+                        style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 25,
-                    ),
-                    Row(
-                      children: [
-                        ContainerRight(
-                          ContainerColor: Colors.red,
-                          imagepath: "images/decision.png",
-                          tilte: "Tenses",
-                          OnTapping: () {},
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        ContainerLeft(
-                          OnTapping: () {},
-                          ContainerColor: Colors.green,
-                          tilte: "Verbs",
-                          imagepath: "images/eng.png",
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      children: [
-                        ContainerLeft(
-                          OnTapping: () {},
-                          ContainerColor: Colors.green,
-                          tilte: "Verbs",
-                          imagepath: "images/eng.png",
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        ContainerRight(
-                          ContainerColor: Colors.red,
-                          imagepath: "images/decision.png",
-                          tilte: "Tenses",
-                          OnTapping: () {},
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    children: [
+                      ContainerRight(
+                        ContainerColor: Colors.white,
+                        imagepath: "images/decision.png",
+                        tilte: "Tenses",
+                        OnTapping: () {},
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      ContainerLeft(
+                        OnTapping: () {},
+                        ContainerColor: Color.fromARGB(255, 207, 236, 236),
+                        tilte: "Verbs",
+                        imagepath: "images/eng.png",
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    children: [
+                      ContainerLeft(
+                        OnTapping: () {},
+                        ContainerColor: Color.fromARGB(255, 207, 236, 236),
+                        tilte: "    Parts\nOf Speech",
+                        imagepath: "images/eng.png",
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      ContainerRight(
+                        ContainerColor: Color.fromARGB(255, 255, 255, 255),
+                        imagepath: "images/decision.png",
+                        tilte: "Conditional\n Sentences",
+                        OnTapping: () {},
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

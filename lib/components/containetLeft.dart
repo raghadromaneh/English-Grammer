@@ -15,6 +15,8 @@ class ContainerLeft extends StatelessWidget {
     return GestureDetector(
       onTap: OnTapping,
       child: Container(
+        width: 170,
+        height: 220,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
             color: ContainerColor,
@@ -33,7 +35,6 @@ class ContainerLeft extends StatelessWidget {
             Text(
               "$tilte",
               style: TextStyle(
-                color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
