@@ -2,20 +2,20 @@ import 'package:englishapp/components/URL_page.dart';
 import 'package:englishapp/screens/DrawerScreen.dart';
 import "package:flutter/material.dart";
 
-class Verbs extends StatefulWidget {
-  const Verbs({super.key});
+class Nouns extends StatefulWidget {
+  const Nouns({super.key});
   @override
-  State<Verbs> createState() => _VerbsState();
+  State<Nouns> createState() => _NounsState();
 }
 
-class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
+class _NounsState extends State<Nouns> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 2, vsync: this);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Verbs",
+          "Nouns",
           style: TextStyle(
             fontSize: 28,
             color: Colors.white,
@@ -56,7 +56,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
             width: double.infinity,
             height: 200,
             child: Image.asset(
-              "images/verb.png",
+              "images/noun.png",
               scale: 3,
             ),
           ),
@@ -100,7 +100,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "What is a Verb?",
+                        "What is a nouns?",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -110,7 +110,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "A verb is a word that expresses action or otherwise helps to make a sentence",
+                        "Nouns refer to a person, place, thing, or idea. They make up the subjects, direct objects, and indirect objects in a sentence, along with other roles. ",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -118,7 +118,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "Action Verb",
+                        "What are examples of nouns?",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -128,7 +128,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "Words such as do, come, go and write are action verbs. Sometimes action verbs express an action that cannot be seen: believe, remember, know, think and understand.",
+                        "Nouns can be living things (Keanu Reeves or cat), places (beach or Detroit), things (ruler or PlayStation 5), or ideas (nihilism or the theory of evolution). ",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -136,7 +136,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "Linking Verbs",
+                        "What are the different types of nouns?",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -146,7 +146,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "Some verbs help to make a statement, not by expressing an action but by serving as a link between two words. These verbs are called linking verbs.The most commonly used linking verbs are forms of the verb be.",
+                        "Common nouns refer to general things (like parks), and proper nouns refer to a specific thing (like Yellowstone National Park). Nouns can also be plural or singular, depending on how many there are, and countable or uncountable, depending on how their plural form is used. ",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -154,7 +154,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "Helping Verbs or Auxiliary Verbs",
+                        "How do you identify a noun in a sentence?",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -164,50 +164,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "Helping verbs (also called auxiliary verbs) work together with the main verb as a unit. There are two main groups of helping verbs: Primary Helping Verbs and Modal Helping Verbs.",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15, top: 15),
-                      child: Text(
-                        "Primary Helping Verbs",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Text(
-                        "different forms of the word be"
-                        "do, did, does"
-                        "has, have, had",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15, top: 15),
-                      child: Text(
-                        "Primary Helping Verbs",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Text(
-                        "can, could"
-                        "may, might"
-                        "will, would"
-                        "shall, should"
-                        "must"
-                        "ought to",
+                        "Nouns usually have articles (the, a, or an) before them in a sentence, but not always. Sometimes you’ll see adjectives or words like “some” or “this” before nouns. Aside from the first word in a sentence, if a word is capitalized then it’s a noun, such as a person’s name. ",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -220,9 +177,9 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                 ListView(
                   children: [
                     URLclass(
-                        mylatfotmtitle: "Verbs",
+                        mylatfotmtitle: "Nouns",
                         mylatformicon: Icons.video_collection,
-                        myfunction: verbsUrl)
+                        myfunction: nounUrl)
                   ],
                 ),
               ],

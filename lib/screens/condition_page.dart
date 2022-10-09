@@ -2,20 +2,21 @@ import 'package:englishapp/components/URL_page.dart';
 import 'package:englishapp/screens/DrawerScreen.dart';
 import "package:flutter/material.dart";
 
-class Verbs extends StatefulWidget {
-  const Verbs({super.key});
+class ConditionalStatement extends StatefulWidget {
+  const ConditionalStatement({super.key});
   @override
-  State<Verbs> createState() => _VerbsState();
+  State<ConditionalStatement> createState() => _ConditionalStatementState();
 }
 
-class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
+class _ConditionalStatementState extends State<ConditionalStatement>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 2, vsync: this);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Verbs",
+          "Conditional Sentences",
           style: TextStyle(
             fontSize: 28,
             color: Colors.white,
@@ -56,7 +57,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
             width: double.infinity,
             height: 200,
             child: Image.asset(
-              "images/verb.png",
+              "images/if.png",
               scale: 3,
             ),
           ),
@@ -100,7 +101,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "What is a Verb?",
+                        "Conditional Sentences",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -110,7 +111,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "A verb is a word that expresses action or otherwise helps to make a sentence",
+                        "Conditional sentences are statements discussing known factors or hypothetical situations and their consequences. Complete conditional sentences contain a conditional clause (often referred to as the if-clause) and the consequence",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -118,7 +119,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "Action Verb",
+                        "Types of Conditional Sentences",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -128,7 +129,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "Words such as do, come, go and write are action verbs. Sometimes action verbs express an action that cannot be seen: believe, remember, know, think and understand.",
+                        "There are four different types of conditional sentences in English. Each expresses a different degree of probability that a situation will occur or would have occurred under certain circumstances.\n1. Zero Conditional Sentences\n2. First Conditional Sentences\n3. Second Conditional Sentences\n4. Third Conditional Sentences",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -136,7 +137,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.only(left: 15, top: 15),
                       child: Text(
-                        "Linking Verbs",
+                        "Examples",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -146,68 +147,7 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "Some verbs help to make a statement, not by expressing an action but by serving as a link between two words. These verbs are called linking verbs.The most commonly used linking verbs are forms of the verb be.",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15, top: 15),
-                      child: Text(
-                        "Helping Verbs or Auxiliary Verbs",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Text(
-                        "Helping verbs (also called auxiliary verbs) work together with the main verb as a unit. There are two main groups of helping verbs: Primary Helping Verbs and Modal Helping Verbs.",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15, top: 15),
-                      child: Text(
-                        "Primary Helping Verbs",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Text(
-                        "different forms of the word be"
-                        "do, did, does"
-                        "has, have, had",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15, top: 15),
-                      child: Text(
-                        "Primary Helping Verbs",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Text(
-                        "can, could"
-                        "may, might"
-                        "will, would"
-                        "shall, should"
-                        "must"
-                        "ought to",
+                        "If a certain condition is true, then a particular result happens.\nI would travel around the world if I won the lottery.\nWhen water reaches 100 degrees, it boils.",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                         textAlign: TextAlign.justify,
                       ),
@@ -220,9 +160,9 @@ class _VerbsState extends State<Verbs> with TickerProviderStateMixin {
                 ListView(
                   children: [
                     URLclass(
-                        mylatfotmtitle: "Verbs",
-                        mylatformicon: Icons.video_collection,
-                        myfunction: verbsUrl)
+                        mylatfotmtitle: "Conditional sentences",
+                        mylatformicon: Icons.video_collection_rounded,
+                        myfunction: conditionalsentencesUrl)
                   ],
                 ),
               ],

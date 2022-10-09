@@ -10,7 +10,7 @@ class ContainerRight extends StatelessWidget {
     return GestureDetector(
       onTap: OnTapping,
       child: Container(
-        width: 170,
+        width: 160,
         height: 220,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(

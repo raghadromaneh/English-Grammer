@@ -11,7 +11,7 @@ class ContainerLeft extends StatelessWidget {
     return GestureDetector(
       onTap: OnTapping,
       child: Container(
-        width: 170,
+        width: 160,
         height: 220,
         padding: const EdgeInsets.all(20),
         decoration: const BoxDecoration(

@@ -1,6 +1,14 @@
 import 'package:englishapp/components/containerright.dart';
 import 'package:englishapp/components/containetLeft.dart';
+import 'package:englishapp/screens/DrawerScreen.dart';
 import 'package:englishapp/screens/Login.dart';
+import 'package:englishapp/screens/Test.dart';
+import 'package:englishapp/screens/adjectives.dart';
+import 'package:englishapp/screens/adverbs.dart';
+import 'package:englishapp/screens/condition_page.dart';
+import 'package:englishapp/screens/nouns.dart';
+import 'package:englishapp/screens/tenses.dart';
+import 'package:englishapp/screens/verbs.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -39,7 +47,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             )
           ],
         ),
-        drawer: const Drawer(),
+        drawer: DrawerScreen(),
         body: ListView(
           children: [
             const SizedBox(
@@ -59,7 +67,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   ),
                 ),
                 Image.asset(
-                  "images/hello.png",
+                  "images/Hi.png",
                   scale: 20,
                 )
               ],
@@ -86,7 +94,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               height: 30,
             ),
             Container(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.all(15),
               decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 194, 229, 231),
                 borderRadius: BorderRadius.only(
@@ -129,10 +137,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             Row(
                               children: [
                                 ContainerRight(
-                                  imagepath: "images/adv.png",
-                                  tilte: "Adverb and it's kinds",
+                                  imagepath: "images/noun.png",
+                                  tilte: "Nouns",
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/adv");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return Nouns();
+                                      },
+                                    ));
                                   },
                                 ),
                                 const SizedBox(
@@ -140,7 +152,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                 ),
                                 ContainerLeft(
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/verbs");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return Verbs();
+                                      },
+                                    ));
                                   },
                                   tilte: "Verbs",
                                   imagepath: "images/verb.png",
@@ -154,19 +170,27 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                               children: [
                                 ContainerLeft(
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/adj");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return Adjectives();
+                                      },
+                                    ));
                                   },
-                                  tilte: "Adjective",
+                                  tilte: "Adjectives",
                                   imagepath: "images/adj.png",
                                 ),
                                 const SizedBox(
                                   width: 15,
                                 ),
                                 ContainerRight(
-                                  imagepath: "images/noun.png",
-                                  tilte: "Noun",
+                                  imagepath: "images/adv.png",
+                                  tilte: "Adverbs",
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/noun");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return Adverbs();
+                                      },
+                                    ));
                                   },
                                 ),
                               ],
@@ -178,10 +202,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             Row(
                               children: [
                                 ContainerRight(
-                                  imagepath: "images/present.png",
-                                  tilte: "Present Tense",
+                                  imagepath: "images/tenses.png",
+                                  tilte: "Tenses",
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/present");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return Tenses();
+                                      },
+                                    ));
                                   },
                                 ),
                                 const SizedBox(
@@ -189,10 +217,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                 ),
                                 ContainerLeft(
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/past");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return ConditionalStatement();
+                                      },
+                                    ));
                                   },
-                                  tilte: "Past Tense",
-                                  imagepath: "images/past.png",
+                                  tilte: "Conditional Sentences",
+                                  imagepath: "images/if.png",
                                 )
                               ],
                             ),
@@ -203,18 +235,17 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                               children: [
                                 ContainerLeft(
                                   OnTapping: () {
-                                    Navigator.pushNamed(context, "/futute");
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) {
+                                        return Test();
+                                      },
+                                    ));
                                   },
-                                  tilte: "Future Tense",
-                                  imagepath: "images/future.png",
+                                  tilte: "Test",
+                                  imagepath: "images/test.png",
                                 ),
                                 const SizedBox(
                                   width: 15,
-                                ),
-                                ContainerRight(
-                                  imagepath: "images/test.png",
-                                  tilte: "Test Yourself",
-                                  OnTapping: () {},
                                 ),
                               ],
                             ),
