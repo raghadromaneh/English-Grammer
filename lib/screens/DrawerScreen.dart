@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:englishapp/screens/Home.dart';
 import 'package:englishapp/screens/Login.dart';
 import 'package:flutter/material.dart';
 
@@ -63,6 +64,27 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   setState(() {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: ((context) {
+                      return Home();
+                    })));
+                  });
+                },
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  "Home",
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              ListTile(
+                onTap: () {
+                  setState(() {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: ((context) {
                       return Login();
                     })));
                   });
@@ -91,22 +113,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     "Exit app",
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )),
-              SizedBox(
-                height: 70,
-              ),
-              Center(
-                  child: IconButton(
-                style: IconButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 2, 69, 70),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/home");
-                },
-                icon: Icon(
-                  Icons.home,
-                  color: Colors.white,
-                ),
-              ))
             ]),
           )
         ],

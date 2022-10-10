@@ -16,7 +16,7 @@ class _ConditionalStatementState extends State<ConditionalStatement>
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Conditional Sentences",
+          "If statements",
           style: TextStyle(
             fontSize: 28,
             color: Colors.white,
@@ -58,7 +58,7 @@ class _ConditionalStatementState extends State<ConditionalStatement>
             height: 200,
             child: Image.asset(
               "images/if.png",
-              scale: 3,
+              width: 10,
             ),
           ),
           const SizedBox(

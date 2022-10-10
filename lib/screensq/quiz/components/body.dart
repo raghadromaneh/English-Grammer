@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:englishapp/components/constants.dart';
-import 'package:englishapp/controllers/question_controller.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:englishapp/controllers/question_controller.dart';
 import 'progress_bar.dart';
 import 'question_card.dart';
 

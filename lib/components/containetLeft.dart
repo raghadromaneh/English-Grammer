@@ -15,7 +15,7 @@ class ContainerLeft extends StatelessWidget {
         height: 220,
         padding: const EdgeInsets.all(20),
         decoration: const BoxDecoration(
-            color: Colors.white,
+            color: Color.fromARGB(255, 181, 229, 221),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(50),
                 bottomRight: Radius.circular(50))),
